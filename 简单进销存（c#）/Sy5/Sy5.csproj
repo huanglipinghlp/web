@@ -1,0 +1,538 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4B517EB3-4B96-4389-AC66-1C7C32FABF54}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sy5</RootNamespace>
+    <AssemblyName>Sy5</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.Keyboard, Version=12.9.0.5, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=12.9.0.5, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking">
+      <HintPath>..\..\..\..\..\Downloads\dockpanel\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainRight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainRight.Designer.cs">
+      <DependentUpon>mainRight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="notemanagementDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>notemanagementDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="notemanagementDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>notemanagementDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="notemanagementDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>notemanagementDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="notemanagementDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>notemanagementDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="notemanagementDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>notemanagementDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="notemanagementDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>notemanagementDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="notemanagementDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>notemanagementDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="notemanagementDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>notemanagementDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="notemanagementDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>notemanagementDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="notemanagementDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>notemanagementDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="notemanagementDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>notemanagementDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="notemanagementDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>notemanagementDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="notemanagementDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>notemanagementDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="notemanagementDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>notemanagementDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="notemanagementDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>notemanagementDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="notemanagementDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>notemanagementDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="notemanagementDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>notemanagementDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="notemanagementDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>notemanagementDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="修改商品信息.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="修改商品信息.Designer.cs">
+      <DependentUpon>修改商品信息.cs</DependentUpon>
+    </Compile>
+    <Compile Include="员工信息.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="员工信息.Designer.cs">
+      <DependentUpon>员工信息.cs</DependentUpon>
+    </Compile>
+    <Compile Include="售货.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="售货.Designer.cs">
+      <DependentUpon>售货.cs</DependentUpon>
+    </Compile>
+    <Compile Include="客户信息.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="客户信息.Designer.cs">
+      <DependentUpon>客户信息.cs</DependentUpon>
+    </Compile>
+    <Compile Include="所有商品信息.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="所有商品信息.Designer.cs">
+      <DependentUpon>所有商品信息.cs</DependentUpon>
+    </Compile>
+    <Compile Include="新增商品.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="新增商品.Designer.cs">
+      <DependentUpon>新增商品.cs</DependentUpon>
+    </Compile>
+    <Compile Include="添加员工信息.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="添加员工信息.Designer.cs">
+      <DependentUpon>添加员工信息.cs</DependentUpon>
+    </Compile>
+    <Compile Include="添加客户信息.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="添加客户信息.Designer.cs">
+      <DependentUpon>添加客户信息.cs</DependentUpon>
+    </Compile>
+    <Compile Include="添加进货信息.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="添加进货信息.Designer.cs">
+      <DependentUpon>添加进货信息.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统用户管理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统用户管理.Designer.cs">
+      <DependentUpon>系统用户管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="进货单管理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="进货单管理.Designer.cs">
+      <DependentUpon>进货单管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="退货单管理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="退货单管理.Designer.cs">
+      <DependentUpon>退货单管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="顾客退货.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="顾客退货.Designer.cs">
+      <DependentUpon>顾客退货.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainRight.resx">
+      <DependentUpon>mainRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="修改商品信息.resx">
+      <DependentUpon>修改商品信息.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="员工信息.resx">
+      <DependentUpon>员工信息.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="售货.resx">
+      <DependentUpon>售货.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="客户信息.resx">
+      <DependentUpon>客户信息.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="所有商品信息.resx">
+      <DependentUpon>所有商品信息.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="新增商品.resx">
+      <DependentUpon>新增商品.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="添加员工信息.resx">
+      <DependentUpon>添加员工信息.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="添加客户信息.resx">
+      <DependentUpon>添加客户信息.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="添加进货信息.resx">
+      <DependentUpon>添加进货信息.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="系统用户管理.resx">
+      <DependentUpon>系统用户管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="进货单管理.resx">
+      <DependentUpon>进货单管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="退货单管理.resx">
+      <DependentUpon>退货单管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="顾客退货.resx">
+      <DependentUpon>顾客退货.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="notemanagementDataSet.xsc">
+      <DependentUpon>notemanagementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="notemanagementDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>notemanagementDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="notemanagementDataSet.xss">
+      <DependentUpon>notemanagementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="notemanagementDataSet1.xsc">
+      <DependentUpon>notemanagementDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="notemanagementDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>notemanagementDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="notemanagementDataSet1.xss">
+      <DependentUpon>notemanagementDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="notemanagementDataSet10.xsc">
+      <DependentUpon>notemanagementDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="notemanagementDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>notemanagementDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="notemanagementDataSet10.xss">
+      <DependentUpon>notemanagementDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="notemanagementDataSet11.xsc">
+      <DependentUpon>notemanagementDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="notemanagementDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>notemanagementDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="notemanagementDataSet11.xss">
+      <DependentUpon>notemanagementDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="notemanagementDataSet12.xsc">
+      <DependentUpon>notemanagementDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="notemanagementDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>notemanagementDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="notemanagementDataSet12.xss">
+      <DependentUpon>notemanagementDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="notemanagementDataSet13.xsc">
+      <DependentUpon>notemanagementDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="notemanagementDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>notemanagementDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="notemanagementDataSet13.xss">
+      <DependentUpon>notemanagementDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="notemanagementDataSet14.xsc">
+      <DependentUpon>notemanagementDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="notemanagementDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>notemanagementDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="notemanagementDataSet14.xss">
+      <DependentUpon>notemanagementDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="notemanagementDataSet15.xsc">
+      <DependentUpon>notemanagementDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="notemanagementDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>notemanagementDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="notemanagementDataSet15.xss">
+      <DependentUpon>notemanagementDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="notemanagementDataSet16.xsc">
+      <DependentUpon>notemanagementDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="notemanagementDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>notemanagementDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="notemanagementDataSet16.xss">
+      <DependentUpon>notemanagementDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="notemanagementDataSet17.xsc">
+      <DependentUpon>notemanagementDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="notemanagementDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>notemanagementDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="notemanagementDataSet17.xss">
+      <DependentUpon>notemanagementDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="notemanagementDataSet2.xsc">
+      <DependentUpon>notemanagementDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="notemanagementDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>notemanagementDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="notemanagementDataSet2.xss">
+      <DependentUpon>notemanagementDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="notemanagementDataSet3.xsc">
+      <DependentUpon>notemanagementDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="notemanagementDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>notemanagementDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="notemanagementDataSet3.xss">
+      <DependentUpon>notemanagementDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="notemanagementDataSet4.xsc">
+      <DependentUpon>notemanagementDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="notemanagementDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>notemanagementDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="notemanagementDataSet4.xss">
+      <DependentUpon>notemanagementDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="notemanagementDataSet5.xsc">
+      <DependentUpon>notemanagementDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="notemanagementDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>notemanagementDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="notemanagementDataSet5.xss">
+      <DependentUpon>notemanagementDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="notemanagementDataSet6.xsc">
+      <DependentUpon>notemanagementDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="notemanagementDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>notemanagementDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="notemanagementDataSet6.xss">
+      <DependentUpon>notemanagementDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="notemanagementDataSet7.xsc">
+      <DependentUpon>notemanagementDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="notemanagementDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>notemanagementDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="notemanagementDataSet7.xss">
+      <DependentUpon>notemanagementDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="notemanagementDataSet8.xsc">
+      <DependentUpon>notemanagementDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="notemanagementDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>notemanagementDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="notemanagementDataSet8.xss">
+      <DependentUpon>notemanagementDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="notemanagementDataSet9.xsc">
+      <DependentUpon>notemanagementDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="notemanagementDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>notemanagementDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="notemanagementDataSet9.xss">
+      <DependentUpon>notemanagementDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Share\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DBCL2\DBCL2.csproj">
+      <Project>{7408d328-524a-401e-b71a-4a591e75ce67}</Project>
+      <Name>DBCL2</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

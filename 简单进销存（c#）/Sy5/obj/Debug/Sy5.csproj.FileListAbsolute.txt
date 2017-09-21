@@ -1,0 +1,33 @@
+c:\users\huangliping\documents\visual studio 2013\Projects\Sy5\Sy5\bin\Debug\Sy5.exe.config
+C:\Users\huangliping\Documents\Visual Studio 2013\Projects\Sy5\Sy5\obj\Debug\Sy5.csprojResolveAssemblyReference.cache
+C:\Users\huangliping\Documents\Visual Studio 2013\Projects\Sy5\Sy5\obj\Debug\Sy5.Form1.resources
+C:\Users\huangliping\Documents\Visual Studio 2013\Projects\Sy5\Sy5\obj\Debug\Sy5.Properties.Resources.resources
+C:\Users\huangliping\Documents\Visual Studio 2013\Projects\Sy5\Sy5\obj\Debug\Sy5.csproj.GenerateResource.Cache
+C:\Users\huangliping\Documents\Visual Studio 2013\Projects\Sy5\Sy5\bin\Debug\Sy5.exe
+C:\Users\huangliping\Documents\Visual Studio 2013\Projects\Sy5\Sy5\bin\Debug\Sy5.pdb
+C:\Users\huangliping\Documents\Visual Studio 2013\Projects\Sy5\Sy5\bin\Debug\EntityFramework.dll
+C:\Users\huangliping\Documents\Visual Studio 2013\Projects\Sy5\Sy5\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\huangliping\Documents\Visual Studio 2013\Projects\Sy5\Sy5\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+C:\Users\huangliping\Documents\Visual Studio 2013\Projects\Sy5\Sy5\bin\Debug\EntityFramework.xml
+C:\Users\huangliping\Documents\Visual Studio 2013\Projects\Sy5\Sy5\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\huangliping\Documents\Visual Studio 2013\Projects\Sy5\Sy5\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\Users\huangliping\Documents\Visual Studio 2013\Projects\Sy5\Sy5\obj\Debug\Sy5.exe
+C:\Users\huangliping\Documents\Visual Studio 2013\Projects\Sy5\Sy5\obj\Debug\Sy5.pdb
+C:\Users\huangliping\documents\visual studio 2013\Projects\Sy5\Sy5\obj\Debug\Sy5.Main.resources
+C:\Users\huangliping\documents\visual studio 2013\Projects\Sy5\Sy5\obj\Debug\Sy5.mainRight.resources
+C:\Users\huangliping\documents\visual studio 2013\Projects\Sy5\Sy5\obj\Debug\Sy5.新增商品.resources
+C:\Users\huangliping\documents\visual studio 2013\Projects\Sy5\Sy5\bin\Debug\DBCL2.dll
+C:\Users\huangliping\documents\visual studio 2013\Projects\Sy5\Sy5\bin\Debug\DBCL2.pdb
+C:\Users\huangliping\documents\visual studio 2013\Projects\Sy5\Sy5\obj\Debug\Sy5.所有商品信息.resources
+C:\Users\huangliping\documents\visual studio 2013\Projects\Sy5\Sy5\obj\Debug\Sy5.客户信息.resources
+C:\Users\huangliping\documents\visual studio 2013\Projects\Sy5\Sy5\obj\Debug\Sy5.员工信息.resources
+C:\Users\huangliping\documents\visual studio 2013\Projects\Sy5\Sy5\obj\Debug\Sy5.添加客户信息.resources
+C:\Users\huangliping\documents\visual studio 2013\Projects\Sy5\Sy5\obj\Debug\Sy5.添加员工信息.resources
+C:\Users\huangliping\documents\visual studio 2013\Projects\Sy5\Sy5\obj\Debug\Sy5.添加进货信息.resources
+C:\Users\huangliping\documents\visual studio 2013\Projects\Sy5\Sy5\obj\Debug\Sy5.系统用户管理.resources
+C:\Users\huangliping\documents\visual studio 2013\Projects\Sy5\Sy5\obj\Debug\Sy5.进货单管理.resources
+C:\Users\huangliping\documents\visual studio 2013\Projects\Sy5\Sy5\obj\Debug\Sy5.退货单管理.resources
+C:\Users\huangliping\documents\visual studio 2013\Projects\Sy5\Sy5\obj\Debug\Sy5.修改商品信息.resources
+E:\Program Files\Git\huanglipinghlp.github.io\简单进销存（c#）\Sy5\bin\Debug\Sy5.exe.config
+E:\Program Files\Git\huanglipinghlp.github.io\简单进销存（c#）\Sy5\obj\Debug\Sy5.exe
+E:\Program Files\Git\huanglipinghlp.github.io\简单进销存（c#）\Sy5\obj\Debug\Sy5.pdb

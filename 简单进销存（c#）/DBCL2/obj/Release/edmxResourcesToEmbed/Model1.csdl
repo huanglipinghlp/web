@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="notemanagementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Brand">
+    <Key>
+      <PropertyRef Name="Brand_Name" />
+    </Key>
+    <Property Name="Brand_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Brand_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="Client_ID" />
+    </Key>
+    <Property Name="Client_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Client_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Client_PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Client_Birthday" Type="DateTime" Precision="3" />
+    <Property Name="Client_Remark" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Client_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Goods">
+    <Key>
+      <PropertyRef Name="Goods_ID" />
+    </Key>
+    <Property Name="Goods_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Brand_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Goods_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Goods_Colour" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Goods_Size" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Goods_Material" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Goods_Clean" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Goods_Season" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Goods_MadeBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Goods_Sum_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Goods_ramarks" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Goods_danjia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Return_Stock" Relationship="Self.FK_Return_Stock_Goods" FromRole="Goods" ToRole="Return_Stock" />
+    <NavigationProperty Name="StockUp" Relationship="Self.FK_StockUp_Goods" FromRole="Goods" ToRole="StockUp" />
+  </EntityType>
+  <EntityType Name="LoginUser">
+    <Key>
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Return_Stock">
+    <Key>
+      <PropertyRef Name="Document_ID" />
+    </Key>
+    <Property Name="Document_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Goods_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Goods_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Goods_danjia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Due" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Real_Payment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Supplier_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Worker_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Account" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Return_Remark" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Goods" Relationship="Self.FK_Return_Stock_Goods" FromRole="Return_Stock" ToRole="Goods" />
+    <NavigationProperty Name="Supplier" Relationship="Self.FK_Return_Stock_Supplier" FromRole="Return_Stock" ToRole="Supplier" />
+    <NavigationProperty Name="Worker" Relationship="Self.FK_Return_Stock_Worker" FromRole="Return_Stock" ToRole="Worker" />
+  </EntityType>
+  <EntityType Name="Sales_Return">
+    <Key>
+      <PropertyRef Name="Document_ID" />
+    </Key>
+    <Property Name="Document_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Document_ID_old1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Goods_ID11" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Goods_Number11" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Goods_ID12" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Goods_Number12" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Goods_ID13" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Goods_Number13" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Goods_ID14" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Goods_Number14" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Goods_ID15" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Goods_Number15" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Goods_ID16" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Goods_Number16" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Goods_sum1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="docu_old_2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Gid21" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gn21" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gid22" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dm22" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gid23" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gn23" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gid24" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gn24" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gid25" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gn25" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gid26" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gn26" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gs2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="docu_old_3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gid31" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gn31" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gid32" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gn32" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gid33" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gn33" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gid34" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gn34" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gid35" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gn35" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gid36" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gn36" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gs3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="docu_old_4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gid41" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gn41" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gid42" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gn42" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gid43" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gn43" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gid44" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gn44" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gid45" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gn45" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gid46" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gn46" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gs4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="docu_old_5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gid51" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gn51" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gid52" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gn52" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gid53" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gn53" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gid54" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gn54" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gid55" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gn55" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gid56" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gn56" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gs5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="docu_old_6" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gid61" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gn61" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gid62" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gn62" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gid63" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gn63" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gid64" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gn64" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gid65" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gn65" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gid66" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gn66" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gs6" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="due" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="real_payment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Client_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Worker_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Account" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Sell_Remark" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Season">
+    <Key>
+      <PropertyRef Name="Season_ID" />
+    </Key>
+    <Property Name="Season_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Season_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sell">
+    <Key>
+      <PropertyRef Name="Document_ID" />
+    </Key>
+    <Property Name="Document_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Goods_ID1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Goods_danjia1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Goods_Number1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Goods_ID2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Goods_danjia2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Goods_Number2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Goods_ID3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Goods_danjia3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Goods_Number3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Goods_ID4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Goods_danjia4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Goods_Number4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Goods_ID5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Goods_danjia5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Goods_Number5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Goods_ID6" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Goods_danjia6" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Goods_Number6" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Due" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Real_Payment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Client_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Worker_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Account" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Sell_Remarks" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="size">
+    <Key>
+      <PropertyRef Name="size1" />
+    </Key>
+    <Property Name="size1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="haoxing" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="jiankuan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="xiongwei" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="yichang" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="xiuchang" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StockUp">
+    <Key>
+      <PropertyRef Name="Document_ID" />
+    </Key>
+    <Property Name="Document_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Goods_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Goods_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Goods_danjia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Due" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Real_Payment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Stock_Money" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Supplier_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Worker_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Account" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Stock_Remark" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Goods" Relationship="Self.FK_StockUp_Goods" FromRole="StockUp" ToRole="Goods" />
+    <NavigationProperty Name="Supplier" Relationship="Self.FK_StockUp_Supplier" FromRole="StockUp" ToRole="Supplier" />
+    <NavigationProperty Name="Worker" Relationship="Self.FK_StockUp_Worker" FromRole="StockUp" ToRole="Worker" />
+  </EntityType>
+  <EntityType Name="Supplier">
+    <Key>
+      <PropertyRef Name="Supplier_ID" />
+    </Key>
+    <Property Name="Supplier_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Supplier_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Supplier_Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Supplier_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Supplier_Reamrk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Return_Stock" Relationship="Self.FK_Return_Stock_Supplier" FromRole="Supplier" ToRole="Return_Stock" />
+    <NavigationProperty Name="StockUp" Relationship="Self.FK_StockUp_Supplier" FromRole="Supplier" ToRole="StockUp" />
+  </EntityType>
+  <EntityType Name="Worker">
+    <Key>
+      <PropertyRef Name="Worker_ID" />
+    </Key>
+    <Property Name="Worker_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Worker_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Worker_Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Worker_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Worker_Bumen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Return_Stock" Relationship="Self.FK_Return_Stock_Worker" FromRole="Worker" ToRole="Return_Stock" />
+    <NavigationProperty Name="StockUp" Relationship="Self.FK_StockUp_Worker" FromRole="Worker" ToRole="StockUp" />
+  </EntityType>
+  <Association Name="FK_Return_Stock_Goods">
+    <End Role="Goods" Type="Self.Goods" Multiplicity="1" />
+    <End Role="Return_Stock" Type="Self.Return_Stock" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Goods">
+        <PropertyRef Name="Goods_ID" />
+      </Principal>
+      <Dependent Role="Return_Stock">
+        <PropertyRef Name="Goods_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StockUp_Goods">
+    <End Role="Goods" Type="Self.Goods" Multiplicity="1" />
+    <End Role="StockUp" Type="Self.StockUp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Goods">
+        <PropertyRef Name="Goods_ID" />
+      </Principal>
+      <Dependent Role="StockUp">
+        <PropertyRef Name="Goods_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Return_Stock_Supplier">
+    <End Role="Supplier" Type="Self.Supplier" Multiplicity="1" />
+    <End Role="Return_Stock" Type="Self.Return_Stock" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplier">
+        <PropertyRef Name="Supplier_ID" />
+      </Principal>
+      <Dependent Role="Return_Stock">
+        <PropertyRef Name="Supplier_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Return_Stock_Worker">
+    <End Role="Worker" Type="Self.Worker" Multiplicity="1" />
+    <End Role="Return_Stock" Type="Self.Return_Stock" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Worker">
+        <PropertyRef Name="Worker_ID" />
+      </Principal>
+      <Dependent Role="Return_Stock">
+        <PropertyRef Name="Worker_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StockUp_Supplier">
+    <End Role="Supplier" Type="Self.Supplier" Multiplicity="1" />
+    <End Role="StockUp" Type="Self.StockUp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplier">
+        <PropertyRef Name="Supplier_ID" />
+      </Principal>
+      <Dependent Role="StockUp">
+        <PropertyRef Name="Supplier_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StockUp_Worker">
+    <End Role="Worker" Type="Self.Worker" Multiplicity="1" />
+    <End Role="StockUp" Type="Self.StockUp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Worker">
+        <PropertyRef Name="Worker_ID" />
+      </Principal>
+      <Dependent Role="StockUp">
+        <PropertyRef Name="Worker_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="notemanagementEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Brand" EntityType="Self.Brand" />
+    <EntitySet Name="Client" EntityType="Self.Client" />
+    <EntitySet Name="Goods" EntityType="Self.Goods" />
+    <EntitySet Name="LoginUser" EntityType="notemanagementModel.LoginUser" />
+    <EntitySet Name="Return_Stock" EntityType="Self.Return_Stock" />
+    <EntitySet Name="Sales_Return" EntityType="Self.Sales_Return" />
+    <EntitySet Name="Season" EntityType="Self.Season" />
+    <EntitySet Name="sell" EntityType="Self.sell" />
+    <EntitySet Name="size" EntityType="Self.size" />
+    <EntitySet Name="StockUp" EntityType="Self.StockUp" />
+    <EntitySet Name="Supplier" EntityType="Self.Supplier" />
+    <EntitySet Name="Worker" EntityType="Self.Worker" />
+    <AssociationSet Name="FK_Return_Stock_Goods" Association="Self.FK_Return_Stock_Goods">
+      <End Role="Goods" EntitySet="Goods" />
+      <End Role="Return_Stock" EntitySet="Return_Stock" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StockUp_Goods" Association="Self.FK_StockUp_Goods">
+      <End Role="Goods" EntitySet="Goods" />
+      <End Role="StockUp" EntitySet="StockUp" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Return_Stock_Supplier" Association="Self.FK_Return_Stock_Supplier">
+      <End Role="Supplier" EntitySet="Supplier" />
+      <End Role="Return_Stock" EntitySet="Return_Stock" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Return_Stock_Worker" Association="Self.FK_Return_Stock_Worker">
+      <End Role="Worker" EntitySet="Worker" />
+      <End Role="Return_Stock" EntitySet="Return_Stock" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StockUp_Supplier" Association="Self.FK_StockUp_Supplier">
+      <End Role="Supplier" EntitySet="Supplier" />
+      <End Role="StockUp" EntitySet="StockUp" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StockUp_Worker" Association="Self.FK_StockUp_Worker">
+      <End Role="Worker" EntitySet="Worker" />
+      <End Role="StockUp" EntitySet="StockUp" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

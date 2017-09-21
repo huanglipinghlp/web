@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="notemanagementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2005" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Brand">
+    <Key>
+      <PropertyRef Name="Brand_Name" />
+    </Key>
+    <Property Name="Brand_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Brand_Name" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="Client_ID" />
+    </Key>
+    <Property Name="Client_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Client_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Client_PhoneNumber" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Client_Birthday" Type="datetime" />
+    <Property Name="Client_Remark" Type="varchar" MaxLength="50" />
+    <Property Name="Client_Email" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Goods">
+    <Key>
+      <PropertyRef Name="Goods_ID" />
+    </Key>
+    <Property Name="Goods_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Brand_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Goods_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Goods_Colour" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Goods_Size" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Goods_Material" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Goods_Clean" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Goods_Season" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Goods_MadeBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Goods_Sum_Number" Type="varchar" MaxLength="50" />
+    <Property Name="Goods_ramarks" Type="varchar" MaxLength="50" />
+    <Property Name="Goods_danjia" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LoginUser">
+    <Key>
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="name" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="40" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Return_Stock">
+    <Key>
+      <PropertyRef Name="Document_ID" />
+    </Key>
+    <Property Name="Document_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Date" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Goods_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Goods_Number" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Goods_danjia" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Due" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Real_Payment" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Supplier_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Worker_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Account" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Return_Remark" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Sales_Return">
+    <Key>
+      <PropertyRef Name="Document_ID" />
+    </Key>
+    <Property Name="Document_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Document_ID_old1" Type="varchar" MaxLength="50" />
+    <Property Name="Goods_ID11" Type="varchar" MaxLength="50" />
+    <Property Name="Goods_Number11" Type="varchar" MaxLength="50" />
+    <Property Name="Goods_ID12" Type="varchar" MaxLength="50" />
+    <Property Name="Goods_Number12" Type="varchar" MaxLength="50" />
+    <Property Name="Goods_ID13" Type="varchar" MaxLength="50" />
+    <Property Name="Goods_Number13" Type="varchar" MaxLength="50" />
+    <Property Name="Goods_ID14" Type="varchar" MaxLength="50" />
+    <Property Name="Goods_Number14" Type="varchar" MaxLength="50" />
+    <Property Name="Goods_ID15" Type="varchar" MaxLength="50" />
+    <Property Name="Goods_Number15" Type="varchar" MaxLength="50" />
+    <Property Name="Goods_ID16" Type="varchar" MaxLength="50" />
+    <Property Name="Goods_Number16" Type="varchar" MaxLength="50" />
+    <Property Name="Goods_sum1" Type="varchar" MaxLength="50" />
+    <Property Name="docu_old_2" Type="varchar" MaxLength="50" />
+    <Property Name="Gid21" Type="varchar" MaxLength="50" />
+    <Property Name="gn21" Type="varchar" MaxLength="50" />
+    <Property Name="gid22" Type="varchar" MaxLength="50" />
+    <Property Name="dm22" Type="varchar" MaxLength="50" />
+    <Property Name="gid23" Type="varchar" MaxLength="50" />
+    <Property Name="gn23" Type="varchar" MaxLength="50" />
+    <Property Name="gid24" Type="varchar" MaxLength="50" />
+    <Property Name="gn24" Type="varchar" MaxLength="50" />
+    <Property Name="gid25" Type="varchar" MaxLength="50" />
+    <Property Name="gn25" Type="varchar" MaxLength="50" />
+    <Property Name="gid26" Type="varchar" MaxLength="50" />
+    <Property Name="gn26" Type="varchar" MaxLength="50" />
+    <Property Name="gs2" Type="varchar" MaxLength="50" />
+    <Property Name="docu_old_3" Type="varchar" MaxLength="50" />
+    <Property Name="gid31" Type="varchar" MaxLength="50" />
+    <Property Name="gn31" Type="varchar" MaxLength="50" />
+    <Property Name="gid32" Type="varchar" MaxLength="50" />
+    <Property Name="gn32" Type="varchar" MaxLength="50" />
+    <Property Name="gid33" Type="varchar" MaxLength="50" />
+    <Property Name="gn33" Type="varchar" MaxLength="50" />
+    <Property Name="gid34" Type="varchar" MaxLength="50" />
+    <Property Name="gn34" Type="varchar" MaxLength="50" />
+    <Property Name="gid35" Type="varchar" MaxLength="50" />
+    <Property Name="gn35" Type="varchar" MaxLength="50" />
+    <Property Name="gid36" Type="varchar" MaxLength="50" />
+    <Property Name="gn36" Type="varchar" MaxLength="50" />
+    <Property Name="gs3" Type="varchar" MaxLength="50" />
+    <Property Name="docu_old_4" Type="varchar" MaxLength="50" />
+    <Property Name="gid41" Type="varchar" MaxLength="50" />
+    <Property Name="gn41" Type="varchar" MaxLength="50" />
+    <Property Name="gid42" Type="varchar" MaxLength="50" />
+    <Property Name="gn42" Type="varchar" MaxLength="50" />
+    <Property Name="gid43" Type="varchar" MaxLength="50" />
+    <Property Name="gn43" Type="varchar" MaxLength="50" />
+    <Property Name="gid44" Type="varchar" MaxLength="50" />
+    <Property Name="gn44" Type="varchar" MaxLength="50" />
+    <Property Name="gid45" Type="varchar" MaxLength="50" />
+    <Property Name="gn45" Type="varchar" MaxLength="50" />
+    <Property Name="gid46" Type="varchar" MaxLength="50" />
+    <Property Name="gn46" Type="varchar" MaxLength="50" />
+    <Property Name="gs4" Type="varchar" MaxLength="50" />
+    <Property Name="docu_old_5" Type="varchar" MaxLength="50" />
+    <Property Name="gid51" Type="varchar" MaxLength="50" />
+    <Property Name="gn51" Type="varchar" MaxLength="50" />
+    <Property Name="gid52" Type="varchar" MaxLength="50" />
+    <Property Name="gn52" Type="varchar" MaxLength="50" />
+    <Property Name="gid53" Type="varchar" MaxLength="50" />
+    <Property Name="gn53" Type="varchar" MaxLength="50" />
+    <Property Name="gid54" Type="varchar" MaxLength="50" />
+    <Property Name="gn54" Type="varchar" MaxLength="50" />
+    <Property Name="gid55" Type="varchar" MaxLength="50" />
+    <Property Name="gn55" Type="varchar" MaxLength="50" />
+    <Property Name="gid56" Type="varchar" MaxLength="50" />
+    <Property Name="gn56" Type="varchar" MaxLength="50" />
+    <Property Name="gs5" Type="varchar" MaxLength="50" />
+    <Property Name="docu_old_6" Type="varchar" MaxLength="50" />
+    <Property Name="gid61" Type="varchar" MaxLength="50" />
+    <Property Name="gn61" Type="varchar" MaxLength="50" />
+    <Property Name="gid62" Type="varchar" MaxLength="50" />
+    <Property Name="gn62" Type="varchar" MaxLength="50" />
+    <Property Name="gid63" Type="varchar" MaxLength="50" />
+    <Property Name="gn63" Type="varchar" MaxLength="50" />
+    <Property Name="gid64" Type="varchar" MaxLength="50" />
+    <Property Name="gn64" Type="varchar" MaxLength="50" />
+    <Property Name="gid65" Type="varchar" MaxLength="50" />
+    <Property Name="gn65" Type="varchar" MaxLength="50" />
+    <Property Name="gid66" Type="varchar" MaxLength="50" />
+    <Property Name="gn66" Type="varchar" MaxLength="50" />
+    <Property Name="gs6" Type="varchar" MaxLength="50" />
+    <Property Name="due" Type="varchar" MaxLength="50" />
+    <Property Name="real_payment" Type="varchar" MaxLength="50" />
+    <Property Name="Client_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Worker_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Account" Type="varchar" MaxLength="50" />
+    <Property Name="Sell_Remark" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Season">
+    <Key>
+      <PropertyRef Name="Season_ID" />
+    </Key>
+    <Property Name="Season_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Season_Name" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sell">
+    <Key>
+      <PropertyRef Name="Document_ID" />
+    </Key>
+    <Property Name="Document_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Goods_ID1" Type="varchar" MaxLength="50" />
+    <Property Name="Goods_danjia1" Type="varchar" MaxLength="50" />
+    <Property Name="Goods_Number1" Type="varchar" MaxLength="50" />
+    <Property Name="Goods_ID2" Type="varchar" MaxLength="50" />
+    <Property Name="Goods_danjia2" Type="varchar" MaxLength="50" />
+    <Property Name="Goods_Number2" Type="varchar" MaxLength="50" />
+    <Property Name="Goods_ID3" Type="varchar" MaxLength="50" />
+    <Property Name="Goods_danjia3" Type="varchar" MaxLength="50" />
+    <Property Name="Goods_Number3" Type="varchar" MaxLength="50" />
+    <Property Name="Goods_ID4" Type="varchar" MaxLength="50" />
+    <Property Name="Goods_danjia4" Type="varchar" MaxLength="50" />
+    <Property Name="Goods_Number4" Type="varchar" MaxLength="50" />
+    <Property Name="Goods_ID5" Type="varchar" MaxLength="50" />
+    <Property Name="Goods_danjia5" Type="varchar" MaxLength="50" />
+    <Property Name="Goods_Number5" Type="varchar" MaxLength="50" />
+    <Property Name="Goods_ID6" Type="varchar" MaxLength="50" />
+    <Property Name="Goods_danjia6" Type="varchar" MaxLength="50" />
+    <Property Name="Goods_Number6" Type="varchar" MaxLength="50" />
+    <Property Name="Due" Type="varchar" MaxLength="50" />
+    <Property Name="Real_Payment" Type="varchar" MaxLength="50" />
+    <Property Name="Client_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Worker_ID" Type="varchar" MaxLength="50" />
+    <Property Name="Account" Type="varchar" MaxLength="50" />
+    <Property Name="Sell_Remarks" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="size">
+    <Key>
+      <PropertyRef Name="size" />
+    </Key>
+    <Property Name="size" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="haoxing" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="jiankuan" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="xiongwei" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="yichang" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="xiuchang" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StockUp">
+    <Key>
+      <PropertyRef Name="Document_ID" />
+    </Key>
+    <Property Name="Document_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Goods_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Goods_Number" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Goods_danjia" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Due" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Real_Payment" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Stock_Money" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Supplier_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Worker_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Account" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Stock_Remark" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Supplier">
+    <Key>
+      <PropertyRef Name="Supplier_ID" />
+    </Key>
+    <Property Name="Supplier_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Supplier_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Supplier_Phone" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Supplier_Email" Type="varchar" MaxLength="50" />
+    <Property Name="Supplier_Reamrk" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Worker">
+    <Key>
+      <PropertyRef Name="Worker_ID" />
+    </Key>
+    <Property Name="Worker_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Worker_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Worker_Phone" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Worker_Email" Type="varchar" MaxLength="50" />
+    <Property Name="Worker_Bumen" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_Return_Stock_Goods">
+    <End Role="Goods" Type="Self.Goods" Multiplicity="1" />
+    <End Role="Return_Stock" Type="Self.Return_Stock" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Goods">
+        <PropertyRef Name="Goods_ID" />
+      </Principal>
+      <Dependent Role="Return_Stock">
+        <PropertyRef Name="Goods_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Return_Stock_Supplier">
+    <End Role="Supplier" Type="Self.Supplier" Multiplicity="1" />
+    <End Role="Return_Stock" Type="Self.Return_Stock" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplier">
+        <PropertyRef Name="Supplier_ID" />
+      </Principal>
+      <Dependent Role="Return_Stock">
+        <PropertyRef Name="Supplier_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Return_Stock_Worker">
+    <End Role="Worker" Type="Self.Worker" Multiplicity="1" />
+    <End Role="Return_Stock" Type="Self.Return_Stock" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Worker">
+        <PropertyRef Name="Worker_ID" />
+      </Principal>
+      <Dependent Role="Return_Stock">
+        <PropertyRef Name="Worker_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StockUp_Goods">
+    <End Role="Goods" Type="Self.Goods" Multiplicity="1" />
+    <End Role="StockUp" Type="Self.StockUp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Goods">
+        <PropertyRef Name="Goods_ID" />
+      </Principal>
+      <Dependent Role="StockUp">
+        <PropertyRef Name="Goods_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StockUp_Supplier">
+    <End Role="Supplier" Type="Self.Supplier" Multiplicity="1" />
+    <End Role="StockUp" Type="Self.StockUp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplier">
+        <PropertyRef Name="Supplier_ID" />
+      </Principal>
+      <Dependent Role="StockUp">
+        <PropertyRef Name="Supplier_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StockUp_Worker">
+    <End Role="Worker" Type="Self.Worker" Multiplicity="1" />
+    <End Role="StockUp" Type="Self.StockUp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Worker">
+        <PropertyRef Name="Worker_ID" />
+      </Principal>
+      <Dependent Role="StockUp">
+        <PropertyRef Name="Worker_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="notemanagementModelStoreContainer">
+    <EntitySet Name="Brand" EntityType="Self.Brand" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Goods" EntityType="Self.Goods" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoginUser" EntityType="Self.LoginUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Return_Stock" EntityType="Self.Return_Stock" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sales_Return" EntityType="Self.Sales_Return" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Season" EntityType="Self.Season" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sell" EntityType="Self.sell" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="size" EntityType="Self.size" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StockUp" EntityType="Self.StockUp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Supplier" EntityType="Self.Supplier" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Worker" EntityType="Self.Worker" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Return_Stock_Goods" Association="Self.FK_Return_Stock_Goods">
+      <End Role="Goods" EntitySet="Goods" />
+      <End Role="Return_Stock" EntitySet="Return_Stock" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Return_Stock_Supplier" Association="Self.FK_Return_Stock_Supplier">
+      <End Role="Supplier" EntitySet="Supplier" />
+      <End Role="Return_Stock" EntitySet="Return_Stock" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Return_Stock_Worker" Association="Self.FK_Return_Stock_Worker">
+      <End Role="Worker" EntitySet="Worker" />
+      <End Role="Return_Stock" EntitySet="Return_Stock" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StockUp_Goods" Association="Self.FK_StockUp_Goods">
+      <End Role="Goods" EntitySet="Goods" />
+      <End Role="StockUp" EntitySet="StockUp" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StockUp_Supplier" Association="Self.FK_StockUp_Supplier">
+      <End Role="Supplier" EntitySet="Supplier" />
+      <End Role="StockUp" EntitySet="StockUp" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StockUp_Worker" Association="Self.FK_StockUp_Worker">
+      <End Role="Worker" EntitySet="Worker" />
+      <End Role="StockUp" EntitySet="StockUp" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

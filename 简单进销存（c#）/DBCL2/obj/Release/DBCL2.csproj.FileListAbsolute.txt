@@ -1,0 +1,11 @@
+C:\Users\huangliping\documents\visual studio 2013\Projects\Sy5\DBCL2\bin\Release\DBCL2.dll.config
+C:\Users\huangliping\documents\visual studio 2013\Projects\Sy5\DBCL2\bin\Release\DBCL2.dll
+C:\Users\huangliping\documents\visual studio 2013\Projects\Sy5\DBCL2\bin\Release\DBCL2.pdb
+C:\Users\huangliping\documents\visual studio 2013\Projects\Sy5\DBCL2\bin\Release\EntityFramework.dll
+C:\Users\huangliping\documents\visual studio 2013\Projects\Sy5\DBCL2\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\huangliping\documents\visual studio 2013\Projects\Sy5\DBCL2\bin\Release\EntityFramework.xml
+C:\Users\huangliping\documents\visual studio 2013\Projects\Sy5\DBCL2\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\huangliping\documents\visual studio 2013\Projects\Sy5\DBCL2\bin\Release\zh-Hans\EntityFramework.resources.dll
+C:\Users\huangliping\documents\visual studio 2013\Projects\Sy5\DBCL2\obj\Release\DBCL2.csprojResolveAssemblyReference.cache
+C:\Users\huangliping\documents\visual studio 2013\Projects\Sy5\DBCL2\obj\Release\DBCL2.dll
+C:\Users\huangliping\documents\visual studio 2013\Projects\Sy5\DBCL2\obj\Release\DBCL2.pdb

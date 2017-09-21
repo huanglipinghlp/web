@@ -1,0 +1,1000 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="notemanagementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2005" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Brand">
+          <Key>
+            <PropertyRef Name="Brand_Name" />
+          </Key>
+          <Property Name="Brand_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Brand_Name" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="Client_ID" />
+          </Key>
+          <Property Name="Client_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Client_Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Client_PhoneNumber" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Client_Birthday" Type="datetime" />
+          <Property Name="Client_Remark" Type="varchar" MaxLength="50" />
+          <Property Name="Client_Email" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Goods">
+          <Key>
+            <PropertyRef Name="Goods_ID" />
+          </Key>
+          <Property Name="Goods_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Brand_Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Goods_Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Goods_Colour" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Goods_Size" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Goods_Material" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Goods_Clean" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Goods_Season" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Goods_MadeBy" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Goods_Sum_Number" Type="varchar" MaxLength="50" />
+          <Property Name="Goods_ramarks" Type="varchar" MaxLength="50" />
+          <Property Name="Goods_danjia" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="LoginUser">
+          <Key>
+            <PropertyRef Name="name" />
+          </Key>
+          <Property Name="name" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="40" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Return_Stock">
+          <Key>
+            <PropertyRef Name="Document_ID" />
+          </Key>
+          <Property Name="Document_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Date" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Goods_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Goods_Number" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Goods_danjia" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Due" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Real_Payment" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Supplier_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Worker_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Account" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Return_Remark" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Sales_Return">
+          <Key>
+            <PropertyRef Name="Document_ID" />
+          </Key>
+          <Property Name="Document_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Document_ID_old1" Type="varchar" MaxLength="50" />
+          <Property Name="Goods_ID11" Type="varchar" MaxLength="50" />
+          <Property Name="Goods_Number11" Type="varchar" MaxLength="50" />
+          <Property Name="Goods_ID12" Type="varchar" MaxLength="50" />
+          <Property Name="Goods_Number12" Type="varchar" MaxLength="50" />
+          <Property Name="Goods_ID13" Type="varchar" MaxLength="50" />
+          <Property Name="Goods_Number13" Type="varchar" MaxLength="50" />
+          <Property Name="Goods_ID14" Type="varchar" MaxLength="50" />
+          <Property Name="Goods_Number14" Type="varchar" MaxLength="50" />
+          <Property Name="Goods_ID15" Type="varchar" MaxLength="50" />
+          <Property Name="Goods_Number15" Type="varchar" MaxLength="50" />
+          <Property Name="Goods_ID16" Type="varchar" MaxLength="50" />
+          <Property Name="Goods_Number16" Type="varchar" MaxLength="50" />
+          <Property Name="Goods_sum1" Type="varchar" MaxLength="50" />
+          <Property Name="docu_old_2" Type="varchar" MaxLength="50" />
+          <Property Name="Gid21" Type="varchar" MaxLength="50" />
+          <Property Name="gn21" Type="varchar" MaxLength="50" />
+          <Property Name="gid22" Type="varchar" MaxLength="50" />
+          <Property Name="dm22" Type="varchar" MaxLength="50" />
+          <Property Name="gid23" Type="varchar" MaxLength="50" />
+          <Property Name="gn23" Type="varchar" MaxLength="50" />
+          <Property Name="gid24" Type="varchar" MaxLength="50" />
+          <Property Name="gn24" Type="varchar" MaxLength="50" />
+          <Property Name="gid25" Type="varchar" MaxLength="50" />
+          <Property Name="gn25" Type="varchar" MaxLength="50" />
+          <Property Name="gid26" Type="varchar" MaxLength="50" />
+          <Property Name="gn26" Type="varchar" MaxLength="50" />
+          <Property Name="gs2" Type="varchar" MaxLength="50" />
+          <Property Name="docu_old_3" Type="varchar" MaxLength="50" />
+          <Property Name="gid31" Type="varchar" MaxLength="50" />
+          <Property Name="gn31" Type="varchar" MaxLength="50" />
+          <Property Name="gid32" Type="varchar" MaxLength="50" />
+          <Property Name="gn32" Type="varchar" MaxLength="50" />
+          <Property Name="gid33" Type="varchar" MaxLength="50" />
+          <Property Name="gn33" Type="varchar" MaxLength="50" />
+          <Property Name="gid34" Type="varchar" MaxLength="50" />
+          <Property Name="gn34" Type="varchar" MaxLength="50" />
+          <Property Name="gid35" Type="varchar" MaxLength="50" />
+          <Property Name="gn35" Type="varchar" MaxLength="50" />
+          <Property Name="gid36" Type="varchar" MaxLength="50" />
+          <Property Name="gn36" Type="varchar" MaxLength="50" />
+          <Property Name="gs3" Type="varchar" MaxLength="50" />
+          <Property Name="docu_old_4" Type="varchar" MaxLength="50" />
+          <Property Name="gid41" Type="varchar" MaxLength="50" />
+          <Property Name="gn41" Type="varchar" MaxLength="50" />
+          <Property Name="gid42" Type="varchar" MaxLength="50" />
+          <Property Name="gn42" Type="varchar" MaxLength="50" />
+          <Property Name="gid43" Type="varchar" MaxLength="50" />
+          <Property Name="gn43" Type="varchar" MaxLength="50" />
+          <Property Name="gid44" Type="varchar" MaxLength="50" />
+          <Property Name="gn44" Type="varchar" MaxLength="50" />
+          <Property Name="gid45" Type="varchar" MaxLength="50" />
+          <Property Name="gn45" Type="varchar" MaxLength="50" />
+          <Property Name="gid46" Type="varchar" MaxLength="50" />
+          <Property Name="gn46" Type="varchar" MaxLength="50" />
+          <Property Name="gs4" Type="varchar" MaxLength="50" />
+          <Property Name="docu_old_5" Type="varchar" MaxLength="50" />
+          <Property Name="gid51" Type="varchar" MaxLength="50" />
+          <Property Name="gn51" Type="varchar" MaxLength="50" />
+          <Property Name="gid52" Type="varchar" MaxLength="50" />
+          <Property Name="gn52" Type="varchar" MaxLength="50" />
+          <Property Name="gid53" Type="varchar" MaxLength="50" />
+          <Property Name="gn53" Type="varchar" MaxLength="50" />
+          <Property Name="gid54" Type="varchar" MaxLength="50" />
+          <Property Name="gn54" Type="varchar" MaxLength="50" />
+          <Property Name="gid55" Type="varchar" MaxLength="50" />
+          <Property Name="gn55" Type="varchar" MaxLength="50" />
+          <Property Name="gid56" Type="varchar" MaxLength="50" />
+          <Property Name="gn56" Type="varchar" MaxLength="50" />
+          <Property Name="gs5" Type="varchar" MaxLength="50" />
+          <Property Name="docu_old_6" Type="varchar" MaxLength="50" />
+          <Property Name="gid61" Type="varchar" MaxLength="50" />
+          <Property Name="gn61" Type="varchar" MaxLength="50" />
+          <Property Name="gid62" Type="varchar" MaxLength="50" />
+          <Property Name="gn62" Type="varchar" MaxLength="50" />
+          <Property Name="gid63" Type="varchar" MaxLength="50" />
+          <Property Name="gn63" Type="varchar" MaxLength="50" />
+          <Property Name="gid64" Type="varchar" MaxLength="50" />
+          <Property Name="gn64" Type="varchar" MaxLength="50" />
+          <Property Name="gid65" Type="varchar" MaxLength="50" />
+          <Property Name="gn65" Type="varchar" MaxLength="50" />
+          <Property Name="gid66" Type="varchar" MaxLength="50" />
+          <Property Name="gn66" Type="varchar" MaxLength="50" />
+          <Property Name="gs6" Type="varchar" MaxLength="50" />
+          <Property Name="due" Type="varchar" MaxLength="50" />
+          <Property Name="real_payment" Type="varchar" MaxLength="50" />
+          <Property Name="Client_ID" Type="varchar" MaxLength="50" />
+          <Property Name="Worker_ID" Type="varchar" MaxLength="50" />
+          <Property Name="Account" Type="varchar" MaxLength="50" />
+          <Property Name="Sell_Remark" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Season">
+          <Key>
+            <PropertyRef Name="Season_ID" />
+          </Key>
+          <Property Name="Season_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Season_Name" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sell">
+          <Key>
+            <PropertyRef Name="Document_ID" />
+          </Key>
+          <Property Name="Document_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Goods_ID1" Type="varchar" MaxLength="50" />
+          <Property Name="Goods_danjia1" Type="varchar" MaxLength="50" />
+          <Property Name="Goods_Number1" Type="varchar" MaxLength="50" />
+          <Property Name="Goods_ID2" Type="varchar" MaxLength="50" />
+          <Property Name="Goods_danjia2" Type="varchar" MaxLength="50" />
+          <Property Name="Goods_Number2" Type="varchar" MaxLength="50" />
+          <Property Name="Goods_ID3" Type="varchar" MaxLength="50" />
+          <Property Name="Goods_danjia3" Type="varchar" MaxLength="50" />
+          <Property Name="Goods_Number3" Type="varchar" MaxLength="50" />
+          <Property Name="Goods_ID4" Type="varchar" MaxLength="50" />
+          <Property Name="Goods_danjia4" Type="varchar" MaxLength="50" />
+          <Property Name="Goods_Number4" Type="varchar" MaxLength="50" />
+          <Property Name="Goods_ID5" Type="varchar" MaxLength="50" />
+          <Property Name="Goods_danjia5" Type="varchar" MaxLength="50" />
+          <Property Name="Goods_Number5" Type="varchar" MaxLength="50" />
+          <Property Name="Goods_ID6" Type="varchar" MaxLength="50" />
+          <Property Name="Goods_danjia6" Type="varchar" MaxLength="50" />
+          <Property Name="Goods_Number6" Type="varchar" MaxLength="50" />
+          <Property Name="Due" Type="varchar" MaxLength="50" />
+          <Property Name="Real_Payment" Type="varchar" MaxLength="50" />
+          <Property Name="Client_ID" Type="varchar" MaxLength="50" />
+          <Property Name="Worker_ID" Type="varchar" MaxLength="50" />
+          <Property Name="Account" Type="varchar" MaxLength="50" />
+          <Property Name="Sell_Remarks" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="size">
+          <Key>
+            <PropertyRef Name="size" />
+          </Key>
+          <Property Name="size" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="haoxing" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="jiankuan" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="xiongwei" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="yichang" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="xiuchang" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="StockUp">
+          <Key>
+            <PropertyRef Name="Document_ID" />
+          </Key>
+          <Property Name="Document_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Goods_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Goods_Number" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Goods_danjia" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Due" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Real_Payment" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Stock_Money" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Supplier_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Worker_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Account" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Stock_Remark" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Supplier">
+          <Key>
+            <PropertyRef Name="Supplier_ID" />
+          </Key>
+          <Property Name="Supplier_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Supplier_Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Supplier_Phone" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Supplier_Email" Type="varchar" MaxLength="50" />
+          <Property Name="Supplier_Reamrk" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Worker">
+          <Key>
+            <PropertyRef Name="Worker_ID" />
+          </Key>
+          <Property Name="Worker_ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Worker_Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Worker_Phone" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Worker_Email" Type="varchar" MaxLength="50" />
+          <Property Name="Worker_Bumen" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_Return_Stock_Goods">
+          <End Role="Goods" Type="Self.Goods" Multiplicity="1" />
+          <End Role="Return_Stock" Type="Self.Return_Stock" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Goods">
+              <PropertyRef Name="Goods_ID" />
+            </Principal>
+            <Dependent Role="Return_Stock">
+              <PropertyRef Name="Goods_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Return_Stock_Supplier">
+          <End Role="Supplier" Type="Self.Supplier" Multiplicity="1" />
+          <End Role="Return_Stock" Type="Self.Return_Stock" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Supplier">
+              <PropertyRef Name="Supplier_ID" />
+            </Principal>
+            <Dependent Role="Return_Stock">
+              <PropertyRef Name="Supplier_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Return_Stock_Worker">
+          <End Role="Worker" Type="Self.Worker" Multiplicity="1" />
+          <End Role="Return_Stock" Type="Self.Return_Stock" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Worker">
+              <PropertyRef Name="Worker_ID" />
+            </Principal>
+            <Dependent Role="Return_Stock">
+              <PropertyRef Name="Worker_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StockUp_Goods">
+          <End Role="Goods" Type="Self.Goods" Multiplicity="1" />
+          <End Role="StockUp" Type="Self.StockUp" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Goods">
+              <PropertyRef Name="Goods_ID" />
+            </Principal>
+            <Dependent Role="StockUp">
+              <PropertyRef Name="Goods_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StockUp_Supplier">
+          <End Role="Supplier" Type="Self.Supplier" Multiplicity="1" />
+          <End Role="StockUp" Type="Self.StockUp" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Supplier">
+              <PropertyRef Name="Supplier_ID" />
+            </Principal>
+            <Dependent Role="StockUp">
+              <PropertyRef Name="Supplier_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StockUp_Worker">
+          <End Role="Worker" Type="Self.Worker" Multiplicity="1" />
+          <End Role="StockUp" Type="Self.StockUp" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Worker">
+              <PropertyRef Name="Worker_ID" />
+            </Principal>
+            <Dependent Role="StockUp">
+              <PropertyRef Name="Worker_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="notemanagementModelStoreContainer">
+          <EntitySet Name="Brand" EntityType="Self.Brand" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Goods" EntityType="Self.Goods" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LoginUser" EntityType="Self.LoginUser" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Return_Stock" EntityType="Self.Return_Stock" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sales_Return" EntityType="Self.Sales_Return" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Season" EntityType="Self.Season" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sell" EntityType="Self.sell" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="size" EntityType="Self.size" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StockUp" EntityType="Self.StockUp" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Supplier" EntityType="Self.Supplier" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Worker" EntityType="Self.Worker" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Return_Stock_Goods" Association="Self.FK_Return_Stock_Goods">
+            <End Role="Goods" EntitySet="Goods" />
+            <End Role="Return_Stock" EntitySet="Return_Stock" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Return_Stock_Supplier" Association="Self.FK_Return_Stock_Supplier">
+            <End Role="Supplier" EntitySet="Supplier" />
+            <End Role="Return_Stock" EntitySet="Return_Stock" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Return_Stock_Worker" Association="Self.FK_Return_Stock_Worker">
+            <End Role="Worker" EntitySet="Worker" />
+            <End Role="Return_Stock" EntitySet="Return_Stock" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StockUp_Goods" Association="Self.FK_StockUp_Goods">
+            <End Role="Goods" EntitySet="Goods" />
+            <End Role="StockUp" EntitySet="StockUp" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StockUp_Supplier" Association="Self.FK_StockUp_Supplier">
+            <End Role="Supplier" EntitySet="Supplier" />
+            <End Role="StockUp" EntitySet="StockUp" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StockUp_Worker" Association="Self.FK_StockUp_Worker">
+            <End Role="Worker" EntitySet="Worker" />
+            <End Role="StockUp" EntitySet="StockUp" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="notemanagementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Brand">
+          <Key>
+            <PropertyRef Name="Brand_Name" />
+          </Key>
+          <Property Name="Brand_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Brand_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="Client_ID" />
+          </Key>
+          <Property Name="Client_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Client_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Client_PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Client_Birthday" Type="DateTime" Precision="3" />
+          <Property Name="Client_Remark" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Client_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Goods">
+          <Key>
+            <PropertyRef Name="Goods_ID" />
+          </Key>
+          <Property Name="Goods_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Brand_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Goods_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Goods_Colour" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Goods_Size" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Goods_Material" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Goods_Clean" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Goods_Season" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Goods_MadeBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Goods_Sum_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Goods_ramarks" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Goods_danjia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Return_Stock" Relationship="Self.FK_Return_Stock_Goods" FromRole="Goods" ToRole="Return_Stock" />
+          <NavigationProperty Name="StockUp" Relationship="Self.FK_StockUp_Goods" FromRole="Goods" ToRole="StockUp" />
+        </EntityType>
+        <EntityType Name="LoginUser">
+          <Key>
+            <PropertyRef Name="name" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Return_Stock">
+          <Key>
+            <PropertyRef Name="Document_ID" />
+          </Key>
+          <Property Name="Document_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Goods_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Goods_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Goods_danjia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Due" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Real_Payment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Supplier_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Worker_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Account" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Return_Remark" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Goods" Relationship="Self.FK_Return_Stock_Goods" FromRole="Return_Stock" ToRole="Goods" />
+          <NavigationProperty Name="Supplier" Relationship="Self.FK_Return_Stock_Supplier" FromRole="Return_Stock" ToRole="Supplier" />
+          <NavigationProperty Name="Worker" Relationship="Self.FK_Return_Stock_Worker" FromRole="Return_Stock" ToRole="Worker" />
+        </EntityType>
+        <EntityType Name="Sales_Return">
+          <Key>
+            <PropertyRef Name="Document_ID" />
+          </Key>
+          <Property Name="Document_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Document_ID_old1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Goods_ID11" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Goods_Number11" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Goods_ID12" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Goods_Number12" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Goods_ID13" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Goods_Number13" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Goods_ID14" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Goods_Number14" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Goods_ID15" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Goods_Number15" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Goods_ID16" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Goods_Number16" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Goods_sum1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="docu_old_2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Gid21" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gn21" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gid22" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="dm22" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gid23" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gn23" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gid24" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gn24" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gid25" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gn25" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gid26" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gn26" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gs2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="docu_old_3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gid31" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gn31" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gid32" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gn32" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gid33" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gn33" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gid34" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gn34" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gid35" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gn35" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gid36" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gn36" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gs3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="docu_old_4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gid41" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gn41" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gid42" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gn42" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gid43" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gn43" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gid44" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gn44" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gid45" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gn45" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gid46" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gn46" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gs4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="docu_old_5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gid51" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gn51" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gid52" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gn52" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gid53" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gn53" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gid54" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gn54" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gid55" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gn55" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gid56" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gn56" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gs5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="docu_old_6" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gid61" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gn61" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gid62" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gn62" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gid63" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gn63" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gid64" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gn64" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gid65" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gn65" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gid66" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gn66" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gs6" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="due" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="real_payment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Client_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Worker_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Account" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Sell_Remark" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Season">
+          <Key>
+            <PropertyRef Name="Season_ID" />
+          </Key>
+          <Property Name="Season_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Season_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sell">
+          <Key>
+            <PropertyRef Name="Document_ID" />
+          </Key>
+          <Property Name="Document_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Goods_ID1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Goods_danjia1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Goods_Number1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Goods_ID2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Goods_danjia2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Goods_Number2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Goods_ID3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Goods_danjia3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Goods_Number3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Goods_ID4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Goods_danjia4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Goods_Number4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Goods_ID5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Goods_danjia5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Goods_Number5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Goods_ID6" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Goods_danjia6" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Goods_Number6" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Due" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Real_Payment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Client_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Worker_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Account" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Sell_Remarks" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="size">
+          <Key>
+            <PropertyRef Name="size1" />
+          </Key>
+          <Property Name="size1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="haoxing" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="jiankuan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="xiongwei" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="yichang" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="xiuchang" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="StockUp">
+          <Key>
+            <PropertyRef Name="Document_ID" />
+          </Key>
+          <Property Name="Document_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Goods_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Goods_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Goods_danjia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Due" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Real_Payment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Stock_Money" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Supplier_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Worker_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Account" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Stock_Remark" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Goods" Relationship="Self.FK_StockUp_Goods" FromRole="StockUp" ToRole="Goods" />
+          <NavigationProperty Name="Supplier" Relationship="Self.FK_StockUp_Supplier" FromRole="StockUp" ToRole="Supplier" />
+          <NavigationProperty Name="Worker" Relationship="Self.FK_StockUp_Worker" FromRole="StockUp" ToRole="Worker" />
+        </EntityType>
+        <EntityType Name="Supplier">
+          <Key>
+            <PropertyRef Name="Supplier_ID" />
+          </Key>
+          <Property Name="Supplier_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Supplier_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Supplier_Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Supplier_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Supplier_Reamrk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Return_Stock" Relationship="Self.FK_Return_Stock_Supplier" FromRole="Supplier" ToRole="Return_Stock" />
+          <NavigationProperty Name="StockUp" Relationship="Self.FK_StockUp_Supplier" FromRole="Supplier" ToRole="StockUp" />
+        </EntityType>
+        <EntityType Name="Worker">
+          <Key>
+            <PropertyRef Name="Worker_ID" />
+          </Key>
+          <Property Name="Worker_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Worker_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Worker_Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Worker_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Worker_Bumen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Return_Stock" Relationship="Self.FK_Return_Stock_Worker" FromRole="Worker" ToRole="Return_Stock" />
+          <NavigationProperty Name="StockUp" Relationship="Self.FK_StockUp_Worker" FromRole="Worker" ToRole="StockUp" />
+        </EntityType>
+        <Association Name="FK_Return_Stock_Goods">
+          <End Role="Goods" Type="Self.Goods" Multiplicity="1" />
+          <End Role="Return_Stock" Type="Self.Return_Stock" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Goods">
+              <PropertyRef Name="Goods_ID" />
+            </Principal>
+            <Dependent Role="Return_Stock">
+              <PropertyRef Name="Goods_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StockUp_Goods">
+          <End Role="Goods" Type="Self.Goods" Multiplicity="1" />
+          <End Role="StockUp" Type="Self.StockUp" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Goods">
+              <PropertyRef Name="Goods_ID" />
+            </Principal>
+            <Dependent Role="StockUp">
+              <PropertyRef Name="Goods_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Return_Stock_Supplier">
+          <End Role="Supplier" Type="Self.Supplier" Multiplicity="1" />
+          <End Role="Return_Stock" Type="Self.Return_Stock" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Supplier">
+              <PropertyRef Name="Supplier_ID" />
+            </Principal>
+            <Dependent Role="Return_Stock">
+              <PropertyRef Name="Supplier_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Return_Stock_Worker">
+          <End Role="Worker" Type="Self.Worker" Multiplicity="1" />
+          <End Role="Return_Stock" Type="Self.Return_Stock" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Worker">
+              <PropertyRef Name="Worker_ID" />
+            </Principal>
+            <Dependent Role="Return_Stock">
+              <PropertyRef Name="Worker_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StockUp_Supplier">
+          <End Role="Supplier" Type="Self.Supplier" Multiplicity="1" />
+          <End Role="StockUp" Type="Self.StockUp" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Supplier">
+              <PropertyRef Name="Supplier_ID" />
+            </Principal>
+            <Dependent Role="StockUp">
+              <PropertyRef Name="Supplier_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StockUp_Worker">
+          <End Role="Worker" Type="Self.Worker" Multiplicity="1" />
+          <End Role="StockUp" Type="Self.StockUp" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Worker">
+              <PropertyRef Name="Worker_ID" />
+            </Principal>
+            <Dependent Role="StockUp">
+              <PropertyRef Name="Worker_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="notemanagementEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Brand" EntityType="Self.Brand" />
+          <EntitySet Name="Client" EntityType="Self.Client" />
+          <EntitySet Name="Goods" EntityType="Self.Goods" />
+          <EntitySet Name="LoginUser" EntityType="notemanagementModel.LoginUser" />
+          <EntitySet Name="Return_Stock" EntityType="Self.Return_Stock" />
+          <EntitySet Name="Sales_Return" EntityType="Self.Sales_Return" />
+          <EntitySet Name="Season" EntityType="Self.Season" />
+          <EntitySet Name="sell" EntityType="Self.sell" />
+          <EntitySet Name="size" EntityType="Self.size" />
+          <EntitySet Name="StockUp" EntityType="Self.StockUp" />
+          <EntitySet Name="Supplier" EntityType="Self.Supplier" />
+          <EntitySet Name="Worker" EntityType="Self.Worker" />
+          <AssociationSet Name="FK_Return_Stock_Goods" Association="Self.FK_Return_Stock_Goods">
+            <End Role="Goods" EntitySet="Goods" />
+            <End Role="Return_Stock" EntitySet="Return_Stock" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StockUp_Goods" Association="Self.FK_StockUp_Goods">
+            <End Role="Goods" EntitySet="Goods" />
+            <End Role="StockUp" EntitySet="StockUp" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Return_Stock_Supplier" Association="Self.FK_Return_Stock_Supplier">
+            <End Role="Supplier" EntitySet="Supplier" />
+            <End Role="Return_Stock" EntitySet="Return_Stock" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Return_Stock_Worker" Association="Self.FK_Return_Stock_Worker">
+            <End Role="Worker" EntitySet="Worker" />
+            <End Role="Return_Stock" EntitySet="Return_Stock" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StockUp_Supplier" Association="Self.FK_StockUp_Supplier">
+            <End Role="Supplier" EntitySet="Supplier" />
+            <End Role="StockUp" EntitySet="StockUp" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StockUp_Worker" Association="Self.FK_StockUp_Worker">
+            <End Role="Worker" EntitySet="Worker" />
+            <End Role="StockUp" EntitySet="StockUp" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="notemanagementModelStoreContainer" CdmEntityContainer="notemanagementEntities">
+          <EntitySetMapping Name="Brand">
+            <EntityTypeMapping TypeName="notemanagementModel.Brand">
+              <MappingFragment StoreEntitySet="Brand">
+                <ScalarProperty Name="Brand_ID" ColumnName="Brand_ID" />
+                <ScalarProperty Name="Brand_Name" ColumnName="Brand_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Client">
+            <EntityTypeMapping TypeName="notemanagementModel.Client">
+              <MappingFragment StoreEntitySet="Client">
+                <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+                <ScalarProperty Name="Client_Name" ColumnName="Client_Name" />
+                <ScalarProperty Name="Client_PhoneNumber" ColumnName="Client_PhoneNumber" />
+                <ScalarProperty Name="Client_Birthday" ColumnName="Client_Birthday" />
+                <ScalarProperty Name="Client_Remark" ColumnName="Client_Remark" />
+                <ScalarProperty Name="Client_Email" ColumnName="Client_Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Goods">
+            <EntityTypeMapping TypeName="notemanagementModel.Goods">
+              <MappingFragment StoreEntitySet="Goods">
+                <ScalarProperty Name="Goods_ID" ColumnName="Goods_ID" />
+                <ScalarProperty Name="Brand_Name" ColumnName="Brand_Name" />
+                <ScalarProperty Name="Goods_Name" ColumnName="Goods_Name" />
+                <ScalarProperty Name="Goods_Colour" ColumnName="Goods_Colour" />
+                <ScalarProperty Name="Goods_Size" ColumnName="Goods_Size" />
+                <ScalarProperty Name="Goods_Material" ColumnName="Goods_Material" />
+                <ScalarProperty Name="Goods_Clean" ColumnName="Goods_Clean" />
+                <ScalarProperty Name="Goods_Season" ColumnName="Goods_Season" />
+                <ScalarProperty Name="Goods_MadeBy" ColumnName="Goods_MadeBy" />
+                <ScalarProperty Name="Goods_Sum_Number" ColumnName="Goods_Sum_Number" />
+                <ScalarProperty Name="Goods_ramarks" ColumnName="Goods_ramarks" />
+                <ScalarProperty Name="Goods_danjia" ColumnName="Goods_danjia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LoginUser">
+            <EntityTypeMapping TypeName="notemanagementModel.LoginUser">
+              <MappingFragment StoreEntitySet="LoginUser">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="password" ColumnName="password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Return_Stock">
+            <EntityTypeMapping TypeName="notemanagementModel.Return_Stock">
+              <MappingFragment StoreEntitySet="Return_Stock">
+                <ScalarProperty Name="Document_ID" ColumnName="Document_ID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Goods_ID" ColumnName="Goods_ID" />
+                <ScalarProperty Name="Goods_Number" ColumnName="Goods_Number" />
+                <ScalarProperty Name="Goods_danjia" ColumnName="Goods_danjia" />
+                <ScalarProperty Name="Due" ColumnName="Due" />
+                <ScalarProperty Name="Real_Payment" ColumnName="Real_Payment" />
+                <ScalarProperty Name="Supplier_ID" ColumnName="Supplier_ID" />
+                <ScalarProperty Name="Worker_ID" ColumnName="Worker_ID" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="Return_Remark" ColumnName="Return_Remark" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sales_Return">
+            <EntityTypeMapping TypeName="notemanagementModel.Sales_Return">
+              <MappingFragment StoreEntitySet="Sales_Return">
+                <ScalarProperty Name="Document_ID" ColumnName="Document_ID" />
+                <ScalarProperty Name="Document_ID_old1" ColumnName="Document_ID_old1" />
+                <ScalarProperty Name="Goods_ID11" ColumnName="Goods_ID11" />
+                <ScalarProperty Name="Goods_Number11" ColumnName="Goods_Number11" />
+                <ScalarProperty Name="Goods_ID12" ColumnName="Goods_ID12" />
+                <ScalarProperty Name="Goods_Number12" ColumnName="Goods_Number12" />
+                <ScalarProperty Name="Goods_ID13" ColumnName="Goods_ID13" />
+                <ScalarProperty Name="Goods_Number13" ColumnName="Goods_Number13" />
+                <ScalarProperty Name="Goods_ID14" ColumnName="Goods_ID14" />
+                <ScalarProperty Name="Goods_Number14" ColumnName="Goods_Number14" />
+                <ScalarProperty Name="Goods_ID15" ColumnName="Goods_ID15" />
+                <ScalarProperty Name="Goods_Number15" ColumnName="Goods_Number15" />
+                <ScalarProperty Name="Goods_ID16" ColumnName="Goods_ID16" />
+                <ScalarProperty Name="Goods_Number16" ColumnName="Goods_Number16" />
+                <ScalarProperty Name="Goods_sum1" ColumnName="Goods_sum1" />
+                <ScalarProperty Name="docu_old_2" ColumnName="docu_old_2" />
+                <ScalarProperty Name="Gid21" ColumnName="Gid21" />
+                <ScalarProperty Name="gn21" ColumnName="gn21" />
+                <ScalarProperty Name="gid22" ColumnName="gid22" />
+                <ScalarProperty Name="dm22" ColumnName="dm22" />
+                <ScalarProperty Name="gid23" ColumnName="gid23" />
+                <ScalarProperty Name="gn23" ColumnName="gn23" />
+                <ScalarProperty Name="gid24" ColumnName="gid24" />
+                <ScalarProperty Name="gn24" ColumnName="gn24" />
+                <ScalarProperty Name="gid25" ColumnName="gid25" />
+                <ScalarProperty Name="gn25" ColumnName="gn25" />
+                <ScalarProperty Name="gid26" ColumnName="gid26" />
+                <ScalarProperty Name="gn26" ColumnName="gn26" />
+                <ScalarProperty Name="gs2" ColumnName="gs2" />
+                <ScalarProperty Name="docu_old_3" ColumnName="docu_old_3" />
+                <ScalarProperty Name="gid31" ColumnName="gid31" />
+                <ScalarProperty Name="gn31" ColumnName="gn31" />
+                <ScalarProperty Name="gid32" ColumnName="gid32" />
+                <ScalarProperty Name="gn32" ColumnName="gn32" />
+                <ScalarProperty Name="gid33" ColumnName="gid33" />
+                <ScalarProperty Name="gn33" ColumnName="gn33" />
+                <ScalarProperty Name="gid34" ColumnName="gid34" />
+                <ScalarProperty Name="gn34" ColumnName="gn34" />
+                <ScalarProperty Name="gid35" ColumnName="gid35" />
+                <ScalarProperty Name="gn35" ColumnName="gn35" />
+                <ScalarProperty Name="gid36" ColumnName="gid36" />
+                <ScalarProperty Name="gn36" ColumnName="gn36" />
+                <ScalarProperty Name="gs3" ColumnName="gs3" />
+                <ScalarProperty Name="docu_old_4" ColumnName="docu_old_4" />
+                <ScalarProperty Name="gid41" ColumnName="gid41" />
+                <ScalarProperty Name="gn41" ColumnName="gn41" />
+                <ScalarProperty Name="gid42" ColumnName="gid42" />
+                <ScalarProperty Name="gn42" ColumnName="gn42" />
+                <ScalarProperty Name="gid43" ColumnName="gid43" />
+                <ScalarProperty Name="gn43" ColumnName="gn43" />
+                <ScalarProperty Name="gid44" ColumnName="gid44" />
+                <ScalarProperty Name="gn44" ColumnName="gn44" />
+                <ScalarProperty Name="gid45" ColumnName="gid45" />
+                <ScalarProperty Name="gn45" ColumnName="gn45" />
+                <ScalarProperty Name="gid46" ColumnName="gid46" />
+                <ScalarProperty Name="gn46" ColumnName="gn46" />
+                <ScalarProperty Name="gs4" ColumnName="gs4" />
+                <ScalarProperty Name="docu_old_5" ColumnName="docu_old_5" />
+                <ScalarProperty Name="gid51" ColumnName="gid51" />
+                <ScalarProperty Name="gn51" ColumnName="gn51" />
+                <ScalarProperty Name="gid52" ColumnName="gid52" />
+                <ScalarProperty Name="gn52" ColumnName="gn52" />
+                <ScalarProperty Name="gid53" ColumnName="gid53" />
+                <ScalarProperty Name="gn53" ColumnName="gn53" />
+                <ScalarProperty Name="gid54" ColumnName="gid54" />
+                <ScalarProperty Name="gn54" ColumnName="gn54" />
+                <ScalarProperty Name="gid55" ColumnName="gid55" />
+                <ScalarProperty Name="gn55" ColumnName="gn55" />
+                <ScalarProperty Name="gid56" ColumnName="gid56" />
+                <ScalarProperty Name="gn56" ColumnName="gn56" />
+                <ScalarProperty Name="gs5" ColumnName="gs5" />
+                <ScalarProperty Name="docu_old_6" ColumnName="docu_old_6" />
+                <ScalarProperty Name="gid61" ColumnName="gid61" />
+                <ScalarProperty Name="gn61" ColumnName="gn61" />
+                <ScalarProperty Name="gid62" ColumnName="gid62" />
+                <ScalarProperty Name="gn62" ColumnName="gn62" />
+                <ScalarProperty Name="gid63" ColumnName="gid63" />
+                <ScalarProperty Name="gn63" ColumnName="gn63" />
+                <ScalarProperty Name="gid64" ColumnName="gid64" />
+                <ScalarProperty Name="gn64" ColumnName="gn64" />
+                <ScalarProperty Name="gid65" ColumnName="gid65" />
+                <ScalarProperty Name="gn65" ColumnName="gn65" />
+                <ScalarProperty Name="gid66" ColumnName="gid66" />
+                <ScalarProperty Name="gn66" ColumnName="gn66" />
+                <ScalarProperty Name="gs6" ColumnName="gs6" />
+                <ScalarProperty Name="due" ColumnName="due" />
+                <ScalarProperty Name="real_payment" ColumnName="real_payment" />
+                <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+                <ScalarProperty Name="Worker_ID" ColumnName="Worker_ID" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="Sell_Remark" ColumnName="Sell_Remark" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Season">
+            <EntityTypeMapping TypeName="notemanagementModel.Season">
+              <MappingFragment StoreEntitySet="Season">
+                <ScalarProperty Name="Season_ID" ColumnName="Season_ID" />
+                <ScalarProperty Name="Season_Name" ColumnName="Season_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sell">
+            <EntityTypeMapping TypeName="notemanagementModel.sell">
+              <MappingFragment StoreEntitySet="sell">
+                <ScalarProperty Name="Document_ID" ColumnName="Document_ID" />
+                <ScalarProperty Name="Goods_ID1" ColumnName="Goods_ID1" />
+                <ScalarProperty Name="Goods_danjia1" ColumnName="Goods_danjia1" />
+                <ScalarProperty Name="Goods_Number1" ColumnName="Goods_Number1" />
+                <ScalarProperty Name="Goods_ID2" ColumnName="Goods_ID2" />
+                <ScalarProperty Name="Goods_danjia2" ColumnName="Goods_danjia2" />
+                <ScalarProperty Name="Goods_Number2" ColumnName="Goods_Number2" />
+                <ScalarProperty Name="Goods_ID3" ColumnName="Goods_ID3" />
+                <ScalarProperty Name="Goods_danjia3" ColumnName="Goods_danjia3" />
+                <ScalarProperty Name="Goods_Number3" ColumnName="Goods_Number3" />
+                <ScalarProperty Name="Goods_ID4" ColumnName="Goods_ID4" />
+                <ScalarProperty Name="Goods_danjia4" ColumnName="Goods_danjia4" />
+                <ScalarProperty Name="Goods_Number4" ColumnName="Goods_Number4" />
+                <ScalarProperty Name="Goods_ID5" ColumnName="Goods_ID5" />
+                <ScalarProperty Name="Goods_danjia5" ColumnName="Goods_danjia5" />
+                <ScalarProperty Name="Goods_Number5" ColumnName="Goods_Number5" />
+                <ScalarProperty Name="Goods_ID6" ColumnName="Goods_ID6" />
+                <ScalarProperty Name="Goods_danjia6" ColumnName="Goods_danjia6" />
+                <ScalarProperty Name="Goods_Number6" ColumnName="Goods_Number6" />
+                <ScalarProperty Name="Due" ColumnName="Due" />
+                <ScalarProperty Name="Real_Payment" ColumnName="Real_Payment" />
+                <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+                <ScalarProperty Name="Worker_ID" ColumnName="Worker_ID" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="Sell_Remarks" ColumnName="Sell_Remarks" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="size">
+            <EntityTypeMapping TypeName="notemanagementModel.size">
+              <MappingFragment StoreEntitySet="size">
+                <ScalarProperty Name="size1" ColumnName="size" />
+                <ScalarProperty Name="haoxing" ColumnName="haoxing" />
+                <ScalarProperty Name="jiankuan" ColumnName="jiankuan" />
+                <ScalarProperty Name="xiongwei" ColumnName="xiongwei" />
+                <ScalarProperty Name="yichang" ColumnName="yichang" />
+                <ScalarProperty Name="xiuchang" ColumnName="xiuchang" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StockUp">
+            <EntityTypeMapping TypeName="notemanagementModel.StockUp">
+              <MappingFragment StoreEntitySet="StockUp">
+                <ScalarProperty Name="Document_ID" ColumnName="Document_ID" />
+                <ScalarProperty Name="Goods_ID" ColumnName="Goods_ID" />
+                <ScalarProperty Name="Goods_Number" ColumnName="Goods_Number" />
+                <ScalarProperty Name="Goods_danjia" ColumnName="Goods_danjia" />
+                <ScalarProperty Name="Due" ColumnName="Due" />
+                <ScalarProperty Name="Real_Payment" ColumnName="Real_Payment" />
+                <ScalarProperty Name="Stock_Money" ColumnName="Stock_Money" />
+                <ScalarProperty Name="Supplier_ID" ColumnName="Supplier_ID" />
+                <ScalarProperty Name="Worker_ID" ColumnName="Worker_ID" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="Stock_Remark" ColumnName="Stock_Remark" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Supplier">
+            <EntityTypeMapping TypeName="notemanagementModel.Supplier">
+              <MappingFragment StoreEntitySet="Supplier">
+                <ScalarProperty Name="Supplier_ID" ColumnName="Supplier_ID" />
+                <ScalarProperty Name="Supplier_Name" ColumnName="Supplier_Name" />
+                <ScalarProperty Name="Supplier_Phone" ColumnName="Supplier_Phone" />
+                <ScalarProperty Name="Supplier_Email" ColumnName="Supplier_Email" />
+                <ScalarProperty Name="Supplier_Reamrk" ColumnName="Supplier_Reamrk" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Worker">
+            <EntityTypeMapping TypeName="notemanagementModel.Worker">
+              <MappingFragment StoreEntitySet="Worker">
+                <ScalarProperty Name="Worker_ID" ColumnName="Worker_ID" />
+                <ScalarProperty Name="Worker_Name" ColumnName="Worker_Name" />
+                <ScalarProperty Name="Worker_Phone" ColumnName="Worker_Phone" />
+                <ScalarProperty Name="Worker_Email" ColumnName="Worker_Email" />
+                <ScalarProperty Name="Worker_Bumen" ColumnName="Worker_Bumen" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

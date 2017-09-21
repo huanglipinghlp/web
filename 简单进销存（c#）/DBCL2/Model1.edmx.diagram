@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="698bf590893a49eb89a1be427cb5f764" Name="Diagram1">
+        <EntityTypeShape EntityType="notemanagementModel.Brand" Width="1.5" PointX="2.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="notemanagementModel.Client" Width="1.5" PointX="2.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="notemanagementModel.Goods" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="notemanagementModel.LoginUser" Width="1.5" PointX="4.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="notemanagementModel.Return_Stock" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="notemanagementModel.Sales_Return" Width="1.5" PointX="4.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="notemanagementModel.Season" Width="1.5" PointX="6.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="notemanagementModel.sell" Width="1.5" PointX="6.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="notemanagementModel.size" Width="1.5" PointX="8.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="notemanagementModel.StockUp" Width="1.5" PointX="6" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="notemanagementModel.Supplier" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="notemanagementModel.Worker" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <AssociationConnector Association="notemanagementModel.FK_Return_Stock_Goods" ManuallyRouted="false" />
+        <AssociationConnector Association="notemanagementModel.FK_StockUp_Goods" ManuallyRouted="false" />
+        <AssociationConnector Association="notemanagementModel.FK_Return_Stock_Supplier" ManuallyRouted="false" />
+        <AssociationConnector Association="notemanagementModel.FK_Return_Stock_Worker" ManuallyRouted="false" />
+        <AssociationConnector Association="notemanagementModel.FK_StockUp_Supplier" ManuallyRouted="false" />
+        <AssociationConnector Association="notemanagementModel.FK_StockUp_Worker" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

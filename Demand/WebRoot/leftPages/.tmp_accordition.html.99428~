@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--框架必需start-->
+<script type="text/javascript" src="../script/jquery-1.4.js"></script>
+<script type="text/javascript" src="../script/framework.js"></script>
+<link href="../css/import_basic.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" id="skin" />
+<!--框架必需end-->
+<script type="text/javascript" src="../script/nav/ddaccordion.js">
+	
+</script>
+<script type="text/javascript" src="../script/text/text-overflow.js">
+	
+</script>
+<style>
+a {
+	
+}
+
+.categoryitems span {
+	width: 160px;
+}
+</style>
+<script>
+	$(function()
+	{
+            	var name = "";
+            	$.ajax({
+            		url : "PermisAction-getPowerList",
+            		type : "post",
+            		dataType : "json",
+            		success : function(data)
+					{
+						//alert(data);
+						$.each(
+							data,
+							function(i, item)
+							{
+								if(item.permission=="账户信息")
+									document.getElementById('zhxx').style.display = "";
+								if(item.permission=="单位信息")
+									document.getElementById('dwxx').style.display = "";
+								if(item.permission=="修改密码")
+									document.getElementById('xgmm').style.display = "";
+								if(item.permission=="用户管理")
+									document.getElementById('yhgl').style.display = "";
+								if(item.permission=="新增注册")
+									document.getElementById('xzzc').style.display = "";
+								if(item.permission=="新增用户")
+									document.getElementById('xzyh').style.display = "";
+								if(item.permission=="新增角色")
+									document.getElementById('xzjs').style.display = "";
+								if(item.permission=="角色权限")
+									document.getElementById('jsqx').style.display = "";
+								if(item.permission=="形式审核")
+									document.getElementById('xssh').style.display = "";
+								if(item.permission=="业务审核")
+									document.getElementById('ywsh').style.display = "";
+								if(item.permission=="新增需求")
+									document.getElementById('xzxq').style.display = "";
+								if(item.permission=="我的需求")
+									document.getElementById('wdxq').style.display = "";
+								if(item.permission=="统计查询")
+									document.getElementById('tjcx').style.display = "";
+								if(item.permission=="系统介绍")
+									document.getElementById('xtjs').style.display = "";
+								if(item.permission=="帮助文件")
+									document.getElementById('bzwj').style.display = "";
+								if(item.permission=="常见问题")
+									document.getElementById('cjwt').style.display = "";
+							}
+						);
+            		},
+            		error : function(XMLHttpRequest, textStatus, errorThrown){
+					alert("XMLHttpRequest.status:"+XMLHttpRequest.status);
+					alert("XMLHttpRequest.readyState:"+XMLHttpRequest.readyState);
+					alert("textStatus:"+textStatus);
+					alert("请检查网络连接！");
+					}
+            	});
+       });
+</script>
+<body leftFrame="true">
+	<div id="scrollContent">
+		<div class="arrowlistmenu">
+			<div class="menuheader expandable">系统菜单</div>
+			<ul class="categoryitems" id="category">
+				<li><a><span class='text_slice'>账户管理</span></a>
+					<ul>
+						<li style="display:none"id="zhxx"><a href='UserInfAction-userInf' target='frmright'><span class='text_slice'>账户信息</span></a></li>
+						<li style="display:none"id="dwxx"><a href='UnitInfAction-unitInf' target='frmright'><span class='text_slice'>单位信息</span></a></li>
+						<li style="display:none"id="xgmm"><a href='UserInfAction-userPwInf' target='frmright'><span class='text_slice'>修改密码</span></a></li>
+					</ul>
+				</li>
+				<li><a><span class='text_slice'>用户管理</span></a>
+					<ul>
+						<li style="display:none"id="yhgl"><a href='UsersManage-userList' target='frmright'><span class='text_slice'>用户管理</span></a></li>
+						<li style="display:none"id="xzzc"><a href='RegisterAction-register' target='frmright'><span class='text_slice'>新增注册</span></a></li>
+						<li style="display:none"id="xzyh"><a href='RegisterAction-userAdd' target='frmright'><span class='text_slice'>新增用户</span></a></li>
+					</ul>
+				</li>
+				<li><a><span class='text_slice'>角色管理</span></a>
+					<ul>
+						<li style="display:none"id="xzjs"><a href='PermisAction-NewRole' target='frmright'><span class='text_slice'>新增角色</span></a></li>
+						<li style="display:none"id="jsqx"><a href='PermisAction-permitJump' target='frmright'><span class='text_slice'>角色权限</span></a></li>
+					</ul>
+				</li>
+				<li><a><span class='text_slice'>需求审核</span></a>
+					<ul>
+						<li style="display:none"id="xssh"><a href='../templete/xtjs.html' target='frmright'><span class='text_slice'>形式审核</span></a></li>
+						<li style="display:none"id="ywsh"><a href='../templete/bzwj.html' target='frmright'><span class='text_slice'>业务审核</span></a></li>
+					</ul>
+				</li>
+				<li><a><span class='text_slice'>需求管理</span></a>
+					<ul>
+						<li style="display:none"id="xzxq"><a href='DemandAction-addDemand' target='frmright'><span class='text_slice'>新增需求</span></a></li>
+						<li style="display:none"id="wdxq"><a href='../templete/bzwj.html' target='frmright'><span class='text_slice'>我的需求</span></a></li>
+						<li style="display:none"id="tjcx"><a href='../templete/bzwj.html' target='frmright'><span class='text_slice'>统计查询</span></a></li>
+					</ul>
+				</li>
+				<li><a><span class='text_slice'>关于系统</span></a>
+					<ul>
+						<li style="display:none"id="xtjs"><a href='../common/xtjs.html' target='frmright'><span class='text_slice'>系统介绍</span></a></li>
+						<li style="display:none"id="bzwj"><a href='../common/bzwj.html' target='frmright'><span class='text_slice'>帮助文件</span></a></li>
+						<li style="display:none"id="cjwt"><a href='../common/cjwtjd.html' target='frmright'><span class='text_slice'>常见问题</span></a></li>
+					</ul>
+				</li>
+			</ul>
+</body>
+</html>

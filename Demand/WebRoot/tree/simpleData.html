@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<TITLE>ZTREE DEMO - Simple Data</TITLE>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<!-- <link rel="stylesheet" href="css/demo.css" type="text/css">
+ -->
+ <link rel="stylesheet" href="css/zTreeStyle/zTreeStyle.css"
+	type="text/css">
+<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="js/jquery.ztree.core.js"></script>
+<!--  <script type="text/javascript" src="js/jquery.ztree.excheck.js"></script>
+	  <script type="text/javascript" src="js/jquery.ztree.exedit.js"></script>-->
+<SCRIPT type="text/javascript">
+<!--
+	var setting = {
+		data : {
+			simpleData : {
+				enable : true
+			}
+		},
+		callback : {
+			onClick : zTreeOnClick
+		}
+	};
+
+	function zTreeOnClick(event, treeId, treeNode) {
+		/* alert(treeNode.id + ", " + treeNode.name); */
+		/* window.open("http://www.baidu.com"); */
+		/* demoIframe.attr("src","action-method?name="+treeNode.name); */
+		$("#res").attr("src","DemandAction-search1?name="+treeNode.name);		
+	};
+
+	$(document).ready(function() {
+		$.post("DB", {
+			"id" : "${id}"
+		}, function(data) {
+
+			zTreeObj = $.fn.zTree.init($("#treeDemo"), setting, data);
+
+		}, "json");
+
+	});
+</SCRIPT>
+<style type="text/css">
+div, p, table, th, td {
+		list-style:none;
+		margin:0; padding:0;
+		color:#333; font-size:12px;
+		font-family:dotum, Verdana, Arial, Helvetica, AppleGothic, sans-serif;
+	}
+	#res {margin-left: 10px;}
+</style>
+</HEAD>
+
+<BODY>
+
+<TABLE border=0 height=600px align=left>
+	<TR>
+		<TD width=260px align=left valign=top style="BORDER-RIGHT: #999999 1px dashed">
+			<ul id="treeDemo" class="ztree" style="height:110%;"></ul>
+		</TD>
+		<TD width=900px align="center" valign=top>
+		<IFRAME ID="res" Name="res" FRAMEBORDER=0 SCROLLING=AUTO width=100%  height=600px SRC=""></IFRAME></TD>
+	</TR>
+</TABLE>
+</BODY>
+</HTML>

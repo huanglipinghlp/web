@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- user登录 -->
+	<bean id="UserDao" class="com.zxc.DUS2.dao.UserDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<bean id="UserService" class="com.zxc.DUS2.service.UserService">
+		<property name="userDao" ref="UserDao"></property>
+		<property name="unitDao" ref="UnitDao"></property>
+	</bean>
+
+	<bean id="UserAction" class="com.zxc.DUS2.action.UserAction"
+		scope="prototype">
+		<property name="userService" ref="UserService"></property>
+	</bean>
+	<!-- 权限 -->
+	<bean id="UserPermisDao" class="com.zxc.DUS2.dao.UserPermisDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="UserPermisService" class="com.zxc.DUS2.service.UserPermisService">
+		<property name="userDao" ref="UserDao"></property>
+		<property name="userPermisDao" ref="UserPermisDao"></property>
+		<property name="userTypeDao" ref="UserTypeDao"></property>
+	</bean>
+	<bean id="PermisAction" class="com.zxc.DUS2.action.PermisAction">
+		<property name="userPermisService" ref="UserPermisService"></property>
+	</bean>
+	<!-- 注册 -->
+	<bean id="UnitDao" class="com.zxc.DUS2.dao.UnitDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="UnitNumberDao" class="com.zxc.DUS2.dao.UnitNumberDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="UserTypeDao" class="com.zxc.DUS2.dao.UserTypeDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="RegisterService" class="com.zxc.DUS2.service.RegisterService">
+	<property name="userDao" ref="UserDao"></property>
+	<property name="unitDao" ref="UnitDao"></property>
+	<property name="unitNumberDao" ref="UnitNumberDao"></property>
+	<property name="userTypeDao" ref="UserTypeDao"></property>
+	</bean>
+	<bean id="RegisterAction" class="com.zxc.DUS2.action.RegisterAction">
+		<property name="registerService" ref="RegisterService"></property>
+	</bean>
+	<!--菜单项账户信息管理  -->
+	<bean id="UserInfAction" class="com.zxc.DUS2.action.UserInfAction">
+	<property name="userService" ref="UserService"></property>
+	</bean>
+	<!-- 单位信息管理 -->
+	<bean id="UnitInfAction" class="com.zxc.DUS2.action.UnitInfAction">
+	<property name="unitService" ref="UnitService"></property>
+	</bean>
+	<bean id="UnitService" class="com.zxc.DUS2.service.UnitService">
+	<property name="unitDao" ref="UnitDao"></property>
+	</bean>
+	<bean id="UsersManage" class="com.zxc.DUS2.action.UsersManage">
+	<property name="unitService" ref="UnitService"></property>
+	<property name="userService" ref="UserService"></property>
+	</bean>
+	<bean id="DemandAction" class="com.zxc.DUS2.action.DemandAction">
+	<property name="unitService" ref="UnitService"></property>
+	<property name="demandService" ref="DemandService"></property>
+	<property name="userService" ref="UserService"></property>
+	</bean>
+	<bean id="DemandService" class="com.zxc.DUS2.service.DemandService">
+	<property name="demandDao" ref="DemandDao"></property>
+	</bean>
+	<bean id="DemandDao" class="com.zxc.DUS2.dao.DemandDao">
+	<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+</beans>
